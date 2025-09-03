@@ -1,0 +1,78 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background: #f9fafb;
+  color: #1e293b;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header, footer {
+  background: #2563eb;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+section {
+  margin: 2rem 0;
+  padding: 1rem;
+  background: #e2e8f0;
+  border-radius: 8px;
+}
+
+/* ------------------- */
+/* Part 1: CSS Animations */
+/* ------------------- */
+.fancy-btn {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.fancy-btn:hover {
+  background: #1e40af;
+  transform: scale(1.1);
+}
+
+.animated-box {
+  width: 100px;
+  height: 100px;
+  margin-top: 1rem;
+  background: #16a34a;
+  animation: pulse 3s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.2); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ------------------- */
+/* Part 3: JS-triggered animations */
+/* ------------------- */
+.js-box {
+  width: 100px;
+  height: 100px;
+  margin-top: 1rem;
+  background: #dc2626;
+}
+
+/* Animation class added by JS */
+.animate {
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-200px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
